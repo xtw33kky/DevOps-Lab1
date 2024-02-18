@@ -1,2 +1,2 @@
 Программа для подсчета факториала (код писал не я)
-![WUP8g8jwEBk](https://github.com/xtw33kky/DevOps-Lab1/assets/65121470/63fe07a7-538a-4cf1-be7a-fc98d6d1cff7)
+![FRcyf0EkHVI](https://github.com/xtw33kky/DevOps-Lab1/assets/65121470/47178080-0849-47dd-813f-988aec22b2bd)
