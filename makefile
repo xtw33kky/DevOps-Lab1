@@ -1,2 +1,2 @@
 all:
-	g++ main.cpp -o factorial_calc/bin/main
+	g++ main.cpp -o myapp/usr/bin/myapp
