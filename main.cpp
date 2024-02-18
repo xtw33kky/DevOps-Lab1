@@ -13,21 +13,14 @@ int main()
 	int input = 1;
 	while (input != -1)
 	{
-		system("cls");
 		std::cout << "Введите целое положительное число от 0 до 20 или -1 для выхода\n";
 		std::cin >> input;
-		
-		if (std::cin.fail())
-		{
-			std::cout << "Ошибка ввода данных." << std::endl;
-		}
-		else
-		{
-			if (input >= 0 && input <= 20)
-				std::cout << "Факториал равен " << findFact(input) << "\n\n";
-			else
-				std::cout << "Ошибка ввода данных." << std::endl;
-		}
+                if (std::cin.fail() || input < -1 || input > 20)
+                        std::cout << "Ошибка ввода данных\n\n";
+                else if (input >= 0 && input <= 20)
+                        std::cout << "Факториал равен " << findFact(input) << "\n\n";
+                std::cin.clear();
+                std::cin.sync();
 	}
 	std::cout << "До свидания\n";
 	return 0;
