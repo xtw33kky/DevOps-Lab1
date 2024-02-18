@@ -1,0 +1,5 @@
+Package: factorial_calc
+Version: 1.0
+Maintainer: Artem
+Architecture: amd64
+Description: Programm for calculate factorial

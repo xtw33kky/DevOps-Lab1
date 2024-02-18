@@ -1,3 +1,2 @@
 all:
-	g++ main.cpp -o main.exe
-	main
+	g++ main.cpp -o bin/main
