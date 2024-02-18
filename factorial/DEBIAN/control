@@ -1,4 +1,4 @@
-Package: factorial
+Package: myapp
 Version: 1.0
 Maintainer: Artem
 Architecture: amd64
