@@ -1,6 +1,7 @@
 #include <iostream>
 #include <limits.h>
 #include <string>
+#include <sstream>
 
 size_t FindFact(int num)
 {
@@ -12,16 +13,21 @@ size_t FindFact(int num)
 
 int GetInput()
 {
+	int intInput = 0;
 	std::string input;
 	getline(std::cin, input, '\n');
+	std::istringstream is (input);
+	is >> intInput;
 
-	if (input.find_first_not_of("0123456789-") == std::string::npos)
+	if (!is.fail() && is.eof())
 	{
-		return std::stoi(input);
+		return intInput;
 	}
 
-	// std::cin.clear();
-	// std::cin.ignore(INT_MAX, '\n');
+	// if (input.find_first_not_of("0123456789") == std::string::npos)
+	// {
+	// 	return std::stoi(input);
+	// }
 	return -2;
 }
 
