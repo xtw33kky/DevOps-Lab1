@@ -1,40 +1,39 @@
 #include <iostream>
-#include <limits.h>
 #include <string>
 #include <sstream>
 
-size_t FindFact(int num)
+size_t FindFact(int num) // Вычисление факториала
 {
 	size_t fact;
-	for (fact = 1; num > 1; num--) 
+	for (fact = 1; num > 1; num--)
 		fact *= num;
 	return fact;
 }
 
-int GetInput()
+int GetInput() // Получение и проверка введеного значения
 {
 	int intInput = 0;
 	std::string input;
+	
+	// Получение введеного значения
 	getline(std::cin, input, '\n');
-	std::istringstream is (input);
+
+	std::istringstream is(input);
 	is >> intInput;
 
-	if (!is.fail() && is.eof())
+	// Проверка введеного значения
+	if (!is.fail()) // Проверка пройдена
 	{
 		return intInput;
 	}
 
-	// if (input.find_first_not_of("0123456789") == std::string::npos)
-	// {
-	// 	return std::stoi(input);
-	// }
-	return -2;
+	return -2; // Проверка не пройдена
 }
 
-int main() 
+int main()
 {
 	int input = 1;
-	while (input != -1)
+	while (input != -1) // Меню программы
 	{
 		std::cout << "Введите целое положительное число от 0 до 20 или -1 для выхода\n";
 		input = GetInput();
