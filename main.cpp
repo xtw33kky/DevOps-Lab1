@@ -1,5 +1,6 @@
 #include <iostream>
 #include <limits.h>
+#include <string>
 
 size_t findFact(int num)
 {
@@ -11,18 +12,16 @@ size_t findFact(int num)
 
 int GetInput()
 {
-	int input = 0;
+	std::string input;
 	std::cin >> input;
-	if (std::cin.fail()) //Если инпут неправильый
+	if (std::cin.fail() || input.find_first_not_of("0123456789") != std::string::npos)
 	{
 		std::cin.clear();
 		std::cin.ignore(INT_MAX, '\n');
 		return -2;
 	}
-	else //Если инпут правильный
-	{
-		return input;
-	}
+	else
+		return 0;
 }
 
 int main() 
