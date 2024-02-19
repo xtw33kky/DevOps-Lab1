@@ -1,5 +1,5 @@
 #include <iostream>
-#include <string>
+#include <limits.h>
 
 size_t findFact(int num)
 {
